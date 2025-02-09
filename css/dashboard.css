@@ -1,0 +1,300 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  background-color: #F5F5F5;
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease-in-out;  /* Smooth background transitions */
+}
+
+/* Sidebar Styling with Gradient */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(135deg, #1E4BB8, #2164F4);  /* Subtle gradient */
+  color: white;
+  padding: 80px 20px 60px 20px;  /* Extra bottom padding for Logout */
+  position: fixed;
+  left: -240px;  /* Sidebar hidden by default */
+  top: 0;
+  transition: left 0.5s ease-in-out;  /* Smoother sidebar transition */
+}
+
+.sidebar.active {
+  left: 0;  /* Slide in when active */
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-left: 25px;  /* Slight slide-in effect on hover */
+}
+
+/* Logout Link at Bottom */
+.logout-link {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #FFD700;  /* Gold color for distinction */
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Menu Toggle Button with Subtle Animation */
+.menu-toggle {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border-radius: 4px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1000;  /* Ensure toggle stays on top */
+}
+
+.menu-toggle:hover {
+  background-color: #1A4FB3;
+  transform: rotate(90deg);  /* Cool subtle rotation on hover */
+}
+
+/* Main Content Styling with Smooth Shift */
+.main-content {
+  margin-left: 60px;  /* Align with toggle button */
+  padding: 40px;
+  width: calc(100% - 60px);
+  transition: margin-left 0.5s ease-in-out;  /* Smoother transition */
+}
+
+.sidebar.active ~ .main-content.shifted {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 400;  /* Lighter weight for thinner appearance */
+  color: #2164F4;
+  margin: 0;
+}
+
+.profile-btn {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.profile-btn:hover {
+  background-color: #1A4FB3;
+}
+
+/* Recommendations Section Matching Header Font */
+.card.recommendations h1 {
+  font-size: 28px;  /* Exact same size as the dashboard header */
+  font-weight: 400;  /* Exact same thinner font weight */
+  color: #2164F4;
+  margin-bottom: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;  /* Subtle hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  background-color: #F5F5F5;
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Sidebar Styling with Gradient */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(135deg, #1E4BB8, #2164F4);
+  color: white;
+  padding: 80px 20px 20px 20px;
+  position: fixed;
+  left: -240px;
+  top: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar nav a, .sidebar nav .logout-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+.sidebar nav a:hover, .sidebar nav .logout-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-left: 25px;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border-radius: 4px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-toggle:hover {
+  background-color: #1A4FB3;
+  transform: rotate(90deg);
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 60px;
+  padding: 40px;
+  width: calc(100% - 60px);
+  transition: margin-left 0.5s ease-in-out;
+}
+
+.sidebar.active ~ .main-content.shifted {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #2164F4;
+  margin: 0;
+}
+
+.profile-btn {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.profile-btn:hover {
+  background-color: #1A4FB3;
+}
+
+/* Recommendations Section */
+.card.recommendations h1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #2164F4;
+  margin-bottom: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}

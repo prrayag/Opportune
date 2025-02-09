@@ -1,0 +1,182 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Futura', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #333333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 500;
+  color: #2164F4;  /* Navy Blue */
+  text-decoration: none;
+}
+
+/* Top Right Button */
+nav a {
+  text-decoration: none;
+}
+
+nav button {
+  background-color: transparent;
+  color: #2164F4;
+  border: 2px solid #2164F4;
+  padding: 10px 20px;
+  margin-left: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+nav button:hover {
+  background-color: #2164F4;
+  color: white;
+  text-decoration: none;  /* Removes underline on hover */
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+}
+
+main h1 {
+  font-size: 58px;
+  font-weight: 500;
+  color: #2164F4;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 20px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Get Started Button */
+.get-started {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.get-started:hover {
+  background-color: #1A4FB3;
+}
+
+/* Subtle Background Accent */
+body::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle at top left, #E3ECFF, transparent);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Subtle Fade-In Animation on Page Load */
+body {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #1A4FB3;
+}
+
+/* Link Styling */
+main p a {
+  color: #2164F4;
+  text-decoration: none;
+}
+
+main p a:hover {
+  text-decoration: underline;
+}
+
+/* Add space between the login button and the "Don't have an account" text */
+main p {
+  margin-top: 20px;  /* Increase space above the text */
+  font-size: 20px;
+  color: #555555;
+}

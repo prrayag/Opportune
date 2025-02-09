@@ -1,0 +1,91 @@
+body {
+  font-family: 'Futura', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  background-color: #F5F5F5;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Futura', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+/* Header Styling */
+header {
+  background-color: #2164F4;  /* Indeed Blue */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+header h1 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #F5F5F5;
+}
+
+.hero h2 {
+  font-size: 36px;
+  color: #2164F4;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: #2164F4;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.hero button:hover {
+  background-color: #1A4FB3;  /* Slightly darker blue on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #F5F5F5;
+  color: #555555;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+  font-size: 14px;
+}

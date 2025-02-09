@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportune - Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <!-- Sidebar with Logout Styled Like Other Options -->
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="connections.html">Connections</a>
+      <a href="insights.html">Insights</a>
+      <a href="ai_path.html">AI Path</a> <!-- AI Path moved before About Us -->
+      <a href="about.html">About Us</a> <!-- About Us after AI Path -->
+      <a href="index.html" class="logout-link">Logout</a> <!-- Logout aligned with other options -->
+    </nav>
+  </div>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="header">
+      <h1>Welcome to Your Dashboard</h1>
+      <button class="profile-btn" onclick="window.location.href='profile.html'">View Profile</button>
+    </div>
+
+    <!-- Recommendations Section -->
+    <div class="card recommendations">
+      <h1>Recommendations</h1>
+      <ul>
+        <li>Update your resume for better visibility.</li>
+        <li>Connect with at least 3 professionals in your field.</li>
+        <li>Apply to roles that match your skills today.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- JavaScript for Sidebar Toggle -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.getElementById('menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      document.querySelector('.main-content').classList.toggle('shifted');
+    });
+  </script>
+
+</body>
+</html>

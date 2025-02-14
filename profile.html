@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportune - Profile</title>
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button class="burger-button" onclick="toggleSidebar()">&#9776;</button>
+    <div class="top-right-buttons">
+      <a href="settings.html" class="button">Settings</a>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="connections.html">Connections</a>
+      <a href="interview.html">Interview Kit</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <div class="profile-header">
+      <img src="images/profile-pic.png" alt="Profile Picture" class="profile-pic" />
+      <h1>John Doe</h1>
+      <p>Software Engineer | Career Enthusiast</p>
+    </div>
+
+    <div class="profile-section">
+      <h2>Summary</h2>
+      <p>Motivated software engineer with 3+ years of experience in building scalable applications and enhancing user experiences.</p>
+    </div>
+
+    <div class="profile-section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BSc Computer Science</strong> – University of Toronto (2019-2022)</li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Software Engineer</strong> – TechCorp (2022-Present)</li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2>Skills</h2>
+      <p>JavaScript, HTML, CSS, React, Node.js, SQL</p>
+    </div>
+  </div>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

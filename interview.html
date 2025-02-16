@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportune - Interview Prep Kit</title>
+  <link rel="stylesheet" href="css/interview.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button class="burger-button" onclick="toggleSidebar()">&#9776;</button>
+    <div class="top-right-buttons">
+      <a href="profile.html" class="button">Profile</a>
+      <a href="settings.html" class="button">Settings</a>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="connections.html">Connections</a>
+      <a href="interview.html">Interview Prep Kit</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1>Interview Preparation Kit</h1>
+    <div class="tabs">
+      <button class="tablink active" onclick="openTab(event, 'questions')">Interview Questions</button>
+      <button class="tablink" onclick="openTab(event, 'templates')">Resume Templates</button>
+      <button class="tablink" onclick="openTab(event, 'salary')">Salary Tips</button>
+    </div>
+
+    <div id="questions" class="tabcontent active">
+      <h2>Common Interview Questions</h2>
+      <div class="card">
+        <h3>Tell me about yourself</h3>
+        <p>Structure your answer using the Present-Past-Future method.</p>
+      </div>
+      <div class="card">
+        <h3>Why do you want this job?</h3>
+        <p>Connect your skills with the job description.</p>
+      </div>
+    </div>
+
+    <div id="templates" class="tabcontent">
+      <h2>Resume and Cover Letter Templates</h2>
+      <p>Download professional templates to enhance your application.</p>
+      <button class="download-button">Download Resume Template</button>
+      <button class="download-button">Download Cover Letter Template</button>
+    </div>
+
+    <div id="salary" class="tabcontent">
+      <h2>Salary Negotiation Tips</h2>
+      <div class="card">
+        <h3>Research Salaries</h3>
+        <p>Use platforms like Glassdoor or PayScale.</p>
+      </div>
+      <div class="card">
+        <h3>Highlight Your Value</h3>
+        <p>Explain why you're worth the salary you're asking for.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/interview.js"></script>
+</body>
+</html>

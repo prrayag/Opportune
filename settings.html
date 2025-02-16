@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Opportune - Settings</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/settings.css" />
 </head>
 <body>
   <div class="top-bar">
@@ -27,25 +27,78 @@
 
   <div class="main-content">
     <h1>Settings</h1>
-    <div class="settings-section">
+    <div class="settings-section" onclick="openModal('personalInfo')">
       <h2>Personal Information</h2>
       <p>Edit your name, email, and contact details.</p>
     </div>
-    <div class="settings-section">
+    <div class="settings-section" onclick="openModal('changePassword')">
       <h2>Change Password</h2>
       <p>Update your password for security.</p>
     </div>
-    <div class="settings-section">
+    <div class="settings-section" onclick="openModal('themeToggle')">
       <h2>Theme</h2>
       <p>Switch between light and dark modes.</p>
     </div>
-    <div class="settings-section">
+    <div class="settings-section" onclick="openModal('profileVisibility')">
       <h2>Profile Visibility</h2>
       <p>Control who can view your profile.</p>
     </div>
-    <div class="settings-section">
+    <div class="settings-section" onclick="openModal('recentLogins')">
       <h2>Recent Login Activities</h2>
       <p>View your recent logins and devices.</p>
+    </div>
+  </div>
+
+  <!-- Modals for Settings -->
+  <div id="personalInfo" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('personalInfo')">&times;</span>
+      <h2>Edit Personal Information</h2>
+      <form>
+        <label>Name:</label><input type="text" placeholder="John Doe" /><br />
+        <label>Email:</label><input type="email" placeholder="john@example.com" /><br />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="changePassword" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('changePassword')">&times;</span>
+      <h2>Change Password</h2>
+      <form>
+        <label>Old Password:</label><input type="password" /><br />
+        <label>New Password:</label><input type="password" /><br />
+        <button type="submit">Change</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="themeToggle" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('themeToggle')">&times;</span>
+      <h2>Theme Settings</h2>
+      <p>Choose your theme:</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </div>
+
+  <div id="profileVisibility" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('profileVisibility')">&times;</span>
+      <h2>Profile Visibility</h2>
+      <p>Set your profile visibility options here.</p>
+      <button>Set Visibility</button>
+    </div>
+  </div>
+
+  <div id="recentLogins" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('recentLogins')">&times;</span>
+      <h2>Recent Login Activities</h2>
+      <p>Last login: 2 days ago from Toronto, Canada.</p>
+      <p>Device: MacBook Pro (Chrome)</p>
+      <button>Close</button>
     </div>
   </div>
 

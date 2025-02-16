@@ -1,17 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const searchBar = document.querySelector('.search-bar');
-  
-    searchBar.addEventListener('keyup', function (e) {
-      const term = e.target.value.toLowerCase();
-      const connections = document.querySelectorAll('.connection-card, .other-connections li');
-      connections.forEach(function (item) {
-        const name = item.textContent.toLowerCase();
-        if (name.includes(term)) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (sidebar.classList.contains('show')) {
+    sidebar.classList.remove('show');
+  } else {
+    sidebar.classList.add('show');
+  }
+}
+
+document.querySelectorAll('.connect-button').forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Connection request sent!');
   });
-  
+});

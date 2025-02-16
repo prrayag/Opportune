@@ -1,8 +1,17 @@
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
-  if (sidebar.classList.contains('show')) {
-    sidebar.classList.remove('show');
-  } else {
-    sidebar.classList.add('show');
-  }
+  sidebar.classList.toggle('show');
+}
+
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  alert('Theme toggled!');
 }

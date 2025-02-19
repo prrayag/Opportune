@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportune - About Us</title>
+  <link rel="stylesheet" href="css/aboutus.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button class="burger-button" onclick="toggleSidebar()">&#9776;</button>
+    <div class="top-right-buttons">
+      <a href="profile.html" class="button">Profile</a>
+      <a href="settings.html" class="button">Settings</a>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="connections.html">Connections</a>
+      <a href="interview.html">Interview Prep Kit</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html" class="active-link">About Us</a>
+      <a href="index.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1>About Us</h1>
+    <section class="about-section">
+      <p>
+        <strong>Opportune</strong> is your pre-job preparation platform, designed to help you
+        ace your interviews and build connections with professionals before stepping into the job market.
+      </p>
+      <p>
+        Our mission is to provide aspiring professionals with the tools and guidance they need to succeed,
+        from interview preparation kits to building valuable connections with industry experts.
+      </p>
+    </section>
+    <section class="team-section">
+      <h2>Meet Our Team</h2>
+      <div class="team-member">
+        <h3>Prayag Mistry</h3>
+        <p>Frontend Developer</p>
+      </div>
+      <div class="team-member">
+        <h3>John Doe</h3>
+        <p>Backend Developer</p>
+      </div>
+      <div class="team-member">
+        <h3>Jane Smith</h3>
+        <p>Database Specialist</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportune - Insights</title>
+  <link rel="stylesheet" href="css/insights.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button class="burger-button" onclick="toggleSidebar()">&#9776;</button>
+    <div class="top-right-buttons">
+      <a href="profile.html" class="button">Profile</a>
+      <a href="settings.html" class="button">Settings</a>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="connections.html">Connections</a>
+      <a href="interview.html">Interview Prep Kit</a>
+      <a href="insights.html" class="active-link">Insights</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html" class="logout-link">Logout</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1>Insights</h1>
+    <p>Explore key insights into your career growth and job market trends.</p>
+
+    <div class="insight-card">
+      <h2>Profile Views Over Time</h2>
+      <canvas id="profileViewsChart"></canvas>
+    </div>
+
+    <div class="insight-card">
+      <h2>Application Success Rate</h2>
+      <canvas id="applicationChart"></canvas>
+    </div>
+
+    <div class="insight-card">
+      <h2>Top Skills in Demand</h2>
+      <ul>
+        <li>Java Development</li>
+        <li>Database Management</li>
+        <li>Frontend Web Development</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/insights.js"></script>
+</body>
+</html>
